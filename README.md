@@ -4,9 +4,7 @@ An ultra-fast TailwindCSS docs search workflow for Alfred 3.
 
 Adapted from [Alfred VueJS Docs](https://github.com/vmitchell85/alfred-vuejs-docs), which is adapted from [Alfred Laravel Docs](https://github.com/tillkruss/alfred-laravel-docs), Thanks [Till Krüss](https://twitter.com/tillkruss)!
 
-<p align="center">
 ![Screenshot](screenshot.png)
-</p>
 
 ## Installation
 
@@ -22,6 +20,4 @@ tw <query>
 
 Just type `tw` followed by your search query.
 
-<p align="center">
 ![Search by Algolia](algolia.png)
-</p>
