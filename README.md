@@ -14,10 +14,16 @@ Adapted from [Alfred VueJS Docs](https://github.com/vmitchell85/alfred-vuejs-doc
 
 ## Usage
 
+Just type `tw` followed by your search query.
+
 ```
 tw <query>
 ```
 
-Just type `tw` followed by your search query.
+To search the [beta docs](https://next.tailwindcss.com/docs), just type `twb` followed by your search query.
+
+```
+twb <query>
+```
 
 ![Search by Algolia](algolia.png)

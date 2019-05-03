@@ -8,6 +8,19 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>89F02255-0DA5-4773-896A-BF05292D2CE8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1BC09BF1-F684-4789-897B-F70B225A4D72</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>BA0F1293-0A15-462E-966E-7C84BCFBC501</key>
 		<array>
 			<dict>
@@ -98,6 +111,72 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>1BC09BF1-F684-4789-897B-F70B225A4D72</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>twb</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Searching docs for "{query}"...</string>
+				<key>script</key>
+				<string>php beta_tailwindcss.php "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search the TailwindCSS Beta docs...</string>
+				<key>title</key>
+				<string>TailwindCSS Beta</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>89F02255-0DA5-4773-896A-BF05292D2CE8</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>An ultra-fast TailwindCSS docs search workflow for Alfred 3.
@@ -108,29 +187,49 @@ Just type `tw` followed by your search query.
 
 ```
 tw &lt;query&gt;
-tw preview mailables
+tw font-family
+```
+
+To search the beta docs at `https://next.tailwindcss.com/docs`, just type `twb` followed by your search query.
+
+```
+twb &lt;query&gt;
 ```
 
 Either press `⌘Y` to Quick Look the result, or press `&lt;enter&gt;` to open it in your web browser.</string>
 	<key>uidata</key>
 	<dict>
+		<key>1BC09BF1-F684-4789-897B-F70B225A4D72</key>
+		<dict>
+			<key>xpos</key>
+			<integer>650</integer>
+			<key>ypos</key>
+			<integer>250</integer>
+		</dict>
+		<key>89F02255-0DA5-4773-896A-BF05292D2CE8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>340</integer>
+			<key>ypos</key>
+			<integer>250</integer>
+		</dict>
 		<key>A0BE7549-BF89-4E85-86DC-E30C0D797564</key>
 		<dict>
 			<key>xpos</key>
-			<integer>510</integer>
+			<integer>650</integer>
 			<key>ypos</key>
 			<integer>90</integer>
 		</dict>
 		<key>BA0F1293-0A15-462E-966E-7C84BCFBC501</key>
 		<dict>
 			<key>xpos</key>
-			<integer>200</integer>
+			<integer>340</integer>
 			<key>ypos</key>
 			<integer>90</integer>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>0.1.0</string>
+	<string>1.0.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/clnt</string>
 </dict>
