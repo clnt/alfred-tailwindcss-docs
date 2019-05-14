@@ -20,6 +20,12 @@ Just type `tw` followed by your search query.
 tw <query>
 ```
 
+To search the [v0 docs](https://v0.tailwindcss.com/docs), just type `tw0` followed by your search query.
+
+```
+tw0 <query>
+```
+
 To search the [beta docs](https://next.tailwindcss.com/docs), just type `twb` followed by your search query.
 
 ```

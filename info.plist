@@ -34,6 +34,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>DFF4C67A-3AC2-4322-B452-3CBA2E3E5BF2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>55F8BC35-9DE7-4CF5-A4B5-C15201065664</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Matt Clinton</string>
@@ -144,6 +157,72 @@
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>keyword</key>
+				<string>tw0</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Searching docs for "{query}"...</string>
+				<key>script</key>
+				<string>php v0_tailwindcss.php "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search the TailwindCSS v0 docs...</string>
+				<key>title</key>
+				<string>TailwindCSS v0</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>89F02255-0DA5-4773-896A-BF05292D2CE8</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>55F8BC35-9DE7-4CF5-A4B5-C15201065664</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
 				<string>twb</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
@@ -173,7 +252,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>89F02255-0DA5-4773-896A-BF05292D2CE8</string>
+			<string>DFF4C67A-3AC2-4322-B452-3CBA2E3E5BF2</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -183,14 +262,20 @@
 
 ## Usage
 
+
 Just type `tw` followed by your search query.
 
 ```
 tw &lt;query&gt;
-tw font-family
 ```
 
-To search the beta docs at `https://next.tailwindcss.com/docs`, just type `twb` followed by your search query.
+To search the [v0 docs](https://v0.tailwindcss.com/docs), just type `tw0` followed by your search query.
+
+```
+tw0 &lt;query&gt;
+```
+
+To search the [beta docs](https://next.tailwindcss.com/docs), just type `twb` followed by your search query.
 
 ```
 twb &lt;query&gt;
@@ -205,6 +290,13 @@ Either press `⌘Y` to Quick Look the result, or press `&lt;enter&gt;` to open i
 			<integer>650</integer>
 			<key>ypos</key>
 			<integer>250</integer>
+		</dict>
+		<key>55F8BC35-9DE7-4CF5-A4B5-C15201065664</key>
+		<dict>
+			<key>xpos</key>
+			<integer>650</integer>
+			<key>ypos</key>
+			<integer>410</integer>
 		</dict>
 		<key>89F02255-0DA5-4773-896A-BF05292D2CE8</key>
 		<dict>
@@ -227,9 +319,16 @@ Either press `⌘Y` to Quick Look the result, or press `&lt;enter&gt;` to open i
 			<key>ypos</key>
 			<integer>90</integer>
 		</dict>
+		<key>DFF4C67A-3AC2-4322-B452-3CBA2E3E5BF2</key>
+		<dict>
+			<key>xpos</key>
+			<integer>340</integer>
+			<key>ypos</key>
+			<integer>410</integer>
+		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>1.1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/clnt</string>
 </dict>
