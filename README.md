@@ -8,7 +8,7 @@ Adapted from [Alfred VueJS Docs](https://github.com/vmitchell85/alfred-vuejs-doc
 
 ## Installation
 
-1. [Download the latest version](https://github.com/clnt/alfred-tailwindcss-docs/releases/download/1.0.0/TailwindCSS.Docs.alfredworkflow)
+1. [Download the latest version](https://github.com/clnt/alfred-tailwindcss-docs/releases/download/1.1.0/TailwindCSSDocs1.1.0.alfredworkflow)
 2. Install the workflow by double-clicking the `.alfredworkflow` file
 3. You can add the workflow to a category, then click "Import" to finish importing. You'll now see the workflow listed in the left sidebar of your Workflows preferences pane.
 
