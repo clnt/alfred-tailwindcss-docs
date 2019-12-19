@@ -328,7 +328,7 @@ Either press `⌘Y` to Quick Look the result, or press `&lt;enter&gt;` to open i
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.1.0</string>
+	<string>1.1.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/clnt</string>
 </dict>
