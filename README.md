@@ -1,6 +1,6 @@
 # TailwindCSS Docs Workflow for Alfred
 
-An ultra-fast TailwindCSS docs search workflow for Alfred 3.
+An ultra-fast TailwindCSS docs search workflow for Alfred 3+ (compatible with 4)
 
 Adapted from [Alfred VueJS Docs](https://github.com/vmitchell85/alfred-vuejs-docs), which is adapted from [Alfred Laravel Docs](https://github.com/tillkruss/alfred-laravel-docs), Thanks [Till Krüss](https://twitter.com/tillkruss)!
 
@@ -24,12 +24,6 @@ To search the [v0 docs](https://v0.tailwindcss.com/docs), just type `tw0` follow
 
 ```
 tw0 <query>
-```
-
-To search the [beta docs](https://next.tailwindcss.com/docs), just type `twb` followed by your search query.
-
-```
-twb <query>
 ```
 
 ![Search by Algolia](algolia.png)
