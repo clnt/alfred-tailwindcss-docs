@@ -20,7 +20,7 @@ Just type `tw` followed by your search query.
 tw <query>
 ```
 
-To search the [v0 docs](https://v0.tailwindcss.com/docs), just type `tw0` followed by your search query.
+To search the [v0 docs](https://tailwindcss-v0.netlify.app/docs), just type `tw0` followed by your search query.
 
 ```
 tw0 <query>
