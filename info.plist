@@ -55,7 +55,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>TailwindCSS Docs</string>
+	<string>TailwindCSSDocs</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -84,6 +84,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -122,7 +124,7 @@
 			<key>uid</key>
 			<string>BA0F1293-0A15-462E-966E-7C84BCFBC501</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -150,6 +152,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -188,7 +192,7 @@
 			<key>uid</key>
 			<string>89F02255-0DA5-4773-896A-BF05292D2CE8</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -216,6 +220,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -223,7 +229,7 @@
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>keyword</key>
-				<string>twb</string>
+				<string>tw1</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -235,15 +241,15 @@
 				<key>runningsubtext</key>
 				<string>Searching docs for "{query}"...</string>
 				<key>script</key>
-				<string>php beta_tailwindcss.php "{query}"</string>
+				<string>php v1_tailwindcss.php "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Search the TailwindCSS Beta docs...</string>
+				<string>Search the TailwindCSS v1 docs...</string>
 				<key>title</key>
-				<string>TailwindCSS Beta</string>
+				<string>TailwindCSS v1</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -254,7 +260,7 @@
 			<key>uid</key>
 			<string>DFF4C67A-3AC2-4322-B452-3CBA2E3E5BF2</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -262,23 +268,22 @@
 
 ## Usage
 
-
-Just type `tw` followed by your search query.
+To search the [v2 docs](https://tailwindcss.com/docs), just type `tw` followed by your search query.
 
 ```
 tw &lt;query&gt;
+```
+
+To search the [v1 docs](https://v1.tailwindcss.com/docs), just type `tw1` followed by your search query.
+
+```
+tw1 &lt;query&gt;
 ```
 
 To search the [v0 docs](https://v0.tailwindcss.com/docs), just type `tw0` followed by your search query.
 
 ```
 tw0 &lt;query&gt;
-```
-
-To search the [beta docs](https://next.tailwindcss.com/docs), just type `twb` followed by your search query.
-
-```
-twb &lt;query&gt;
 ```
 
 Either press `⌘Y` to Quick Look the result, or press `&lt;enter&gt;` to open it in your web browser.</string>
@@ -327,9 +332,11 @@ Either press `⌘Y` to Quick Look the result, or press `&lt;enter&gt;` to open i
 			<integer>410</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>1.1.1</string>
+	<string>2.0.0</string>
 	<key>webaddress</key>
-	<string>https://github.com/clnt</string>
+	<string>https://github.com/clnt/alfred-tailwindcss-docs</string>
 </dict>
 </plist>
