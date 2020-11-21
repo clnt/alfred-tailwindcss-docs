@@ -15,9 +15,9 @@ $workflow = new Workflow;
 $parsedown = new Parsedown;
 $algolia = new Algolia('R90K1756AM', 'a6e52654d6b591febdf42b07e0e7374a');
 
-AlgoliaUserAgent::addSuffixUserAgentSegment('TailwindCSS Alfred Workflow', '1.1.0');
+AlgoliaUserAgent::addSuffixUserAgentSegment('TailwindCSS Alfred Workflow', '2.0.0');
 
-$index = $algolia->initIndex('tailwindcss');
+$index = $algolia->initIndex('v2_tailwindcss');
 $search = $index->search($query);
 $results = $search['hits'];
 
@@ -32,7 +32,7 @@ if (empty($results)) {
             ->arg("https://www.google.com/search?q=tailwindcss+{$query}")
             ->quicklookurl("https://www.google.com/search?q=tailwindcss+{$query}")
             ->valid(true);
-    
+
         echo $workflow->output();
         exit;
     }
