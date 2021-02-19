@@ -1,6 +1,6 @@
 # TailwindCSS Docs Workflow for Alfred
 
-An ultra-fast TailwindCSS docs search workflow for Alfred 3+ (compatible with 4)
+An ultra-fast TailwindCSS docs search workflow for Alfred 4
 
 Adapted from [Alfred VueJS Docs](https://github.com/vmitchell85/alfred-vuejs-docs), which is adapted from [Alfred Laravel Docs](https://github.com/tillkruss/alfred-laravel-docs), Thanks [Till Krüss](https://twitter.com/tillkruss)!
 
