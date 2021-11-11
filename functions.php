@@ -33,7 +33,7 @@ function getTitle($hit)
         return [$hit['hierarchy']['lvl1'], 1];
     }
 
-    return null;
+    return [null, null];
 }
 
 function getSubtitle($hit, $titleLevel)

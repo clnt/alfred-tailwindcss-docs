@@ -32,6 +32,11 @@ if (empty($results)) {
 
 foreach ($results as $hit) {
     list($title, $titleLevel) = getTitle($hit);
+
+    if ($title === null) {
+        continue;
+    }
+
     $title = html_entity_decode($title);
 
     $workflow->result()
