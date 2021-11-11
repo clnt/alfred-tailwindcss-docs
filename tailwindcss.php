@@ -2,72 +2,48 @@
 
 use Alfred\Workflows\Workflow;
 
-use AlgoliaSearch\Client as Algolia;
-use AlgoliaSearch\Version as AlgoliaUserAgent;
+use Algolia\AlgoliaSearch\SearchClient as Algolia;
+use Algolia\AlgoliaSearch\Support\UserAgent as AlgoliaUserAgent;
 
 require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/functions.php';
 
 $query = $argv[1];
-//$branch = empty($_ENV['branch']) ? 'master' : $_ENV['branch'];
-//$subtext = empty($_ENV['alfred_theme_subtext']) ? '0' : $_ENV['alfred_theme_subtext'];
 
 $workflow = new Workflow;
-$parsedown = new Parsedown;
-$algolia = new Algolia('R90K1756AM', 'a6e52654d6b591febdf42b07e0e7374a');
+$algolia = Algolia::create('R90K1756AM', 'a6e52654d6b591febdf42b07e0e7374a');
 
-AlgoliaUserAgent::addSuffixUserAgentSegment('TailwindCSS Alfred Workflow', '2.0.0');
+AlgoliaUserAgent::addCustomUserAgent('TailwindCSS Alfred Workflow', '2.0.1');
 
-$index = $algolia->initIndex('v2_tailwindcss');
-$search = $index->search($query);
-$results = $search['hits'];
-
-$subtextSupported = $subtext === '0' || $subtext === '2';
+$results = getResults($algolia, 'v2_tailwindcss', $query);
 
 if (empty($results)) {
-    if (empty($results)) {
-        $workflow->result()
-            ->title('No matches')
-            ->icon('google.png')
-            ->subtitle("No match found in the docs. Search Google for: \"TailwindCSS+{$query}\"")
-            ->arg("https://www.google.com/search?q=tailwindcss+{$query}")
-            ->quicklookurl("https://www.google.com/search?q=tailwindcss+{$query}")
-            ->valid(true);
+    $workflow->result()
+        ->title('No matches')
+        ->icon('google.png')
+        ->subtitle("No match found in the docs. Search Google for: \"TailwindCSS+{$query}\"")
+        ->arg("https://www.google.com/search?q=tailwindcss+{$query}")
+        ->quicklookurl("https://www.google.com/search?q=tailwindcss+{$query}")
+        ->valid(true);
 
-        echo $workflow->output();
-        exit;
-    }
+    echo $workflow->output();
     exit;
 }
 
-$urls = [];
-
-
 foreach ($results as $hit) {
-    $highestLvl = $hit['hierarchy']['lvl6'] ? 6 : (
-        $hit['hierarchy']['lvl5'] ? 5 : (
-            $hit['hierarchy']['lvl4'] ? 4 : (
-                $hit['hierarchy']['lvl3'] ? 3 : (
-                    $hit['hierarchy']['lvl2'] ? 2 : (
-                        $hit['hierarchy']['lvl1'] ? 1 : 0
-                    )
-                )
-            )
-        )
-    );
+    list($title, $titleLevel) = getTitle($hit);
 
-    $title = $hit['hierarchy']['lvl' . $highestLvl];
-    $currentLvl = 0;
-    $subtitle = $hit['hierarchy']['lvl0'];
-    while ($currentLvl < $highestLvl) {
-        $currentLvl = $currentLvl + 1;
-        $subtitle = $subtitle . ' » ' . $hit['hierarchy']['lvl' . $currentLvl];
+    if ($title === null) {
+        continue;
     }
+
+    $title = html_entity_decode($title);
 
     $workflow->result()
         ->uid($hit['objectID'])
         ->title($title)
         ->autocomplete($title)
-        ->subtitle($subtitle)
+        ->subtitle(html_entity_decode(getSubtitle($hit, $titleLevel)))
         ->arg($hit['url'])
         ->quicklookurl($hit['url'])
         ->valid(true);

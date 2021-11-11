@@ -105,7 +105,13 @@
 				<key>runningsubtext</key>
 				<string>Searching docs for "{query}"...</string>
 				<key>script</key>
-				<string>php tailwindcss.php "{query}"</string>
+				<string>if [ -f "/opt/homebrew/bin/php" ]; then
+    /opt/homebrew/bin/php tailwindcss.php "{query}"
+elif [ -f "/usr/local/bin/php" ]; then
+    /usr/local/bin/php tailwindcss.php "{query}"
+elif [ -f "/usr/bin/php" ]; then
+    /usr/bin/php tailwindcss.php "{query}"
+fi</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -173,7 +179,13 @@
 				<key>runningsubtext</key>
 				<string>Searching docs for "{query}"...</string>
 				<key>script</key>
-				<string>php v0_tailwindcss.php "{query}"</string>
+				<string>if [ -f "/opt/homebrew/bin/php" ]; then
+    /opt/homebrew/bin/php v0_tailwindcss.php "{query}"
+elif [ -f "/usr/local/bin/php" ]; then
+    /usr/local/bin/php v0_tailwindcss.php "{query}"
+elif [ -f "/usr/bin/php" ]; then
+    /usr/bin/php v0_tailwindcss.php "{query}"
+fi</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -241,7 +253,13 @@
 				<key>runningsubtext</key>
 				<string>Searching docs for "{query}"...</string>
 				<key>script</key>
-				<string>php v1_tailwindcss.php "{query}"</string>
+				<string>if [ -f "/opt/homebrew/bin/php" ]; then
+    /opt/homebrew/bin/php v1_tailwindcss.php "{query}"
+elif [ -f "/usr/local/bin/php" ]; then
+    /usr/local/bin/php v1_tailwindcss.php "{query}"
+elif [ -f "/usr/bin/php" ]; then
+    /usr/bin/php v1_tailwindcss.php "{query}"
+fi</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -335,7 +353,7 @@ Either press `⌘Y` to Quick Look the result, or press `&lt;enter&gt;` to open i
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>2.0.0</string>
+	<string>2.0.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/clnt/alfred-tailwindcss-docs</string>
 </dict>
