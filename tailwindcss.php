@@ -11,11 +11,12 @@ require __DIR__ . '/functions.php';
 $query = $argv[1];
 
 $workflow = new Workflow;
-$algolia = Algolia::create('R90K1756AM', 'a6e52654d6b591febdf42b07e0e7374a');
+//$algolia = Algolia::create('R90K1756AM', 'a6e52654d6b591febdf42b07e0e7374a');
+$algolia = Algolia::create('KNPXZI5B0M', '5fc87cef58bb80203d2207578309fab6');
 
-AlgoliaUserAgent::addCustomUserAgent('TailwindCSS Alfred Workflow', '3.0.0');
+AlgoliaUserAgent::addCustomUserAgent('TailwindCSS Alfred Workflow', '3.0.1');
 
-$results = getResults($algolia, 'v3_tailwindcss', $query);
+$results = getResults($algolia, 'tailwindcss', $query, ['facetFilters' => 'version:v3']);
 
 if (empty($results)) {
     $workflow->result()
