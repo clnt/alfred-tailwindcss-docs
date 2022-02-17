@@ -13,7 +13,7 @@ $query = $argv[1];
 $workflow = new Workflow;
 $algolia = Algolia::create('R90K1756AM', 'a6e52654d6b591febdf42b07e0e7374a');
 
-AlgoliaUserAgent::addCustomUserAgent('TailwindCSS Alfred Workflow', '3.0.0');
+AlgoliaUserAgent::addCustomUserAgent('TailwindCSS Alfred Workflow', '3.0.1');
 
 $results = getResults($algolia, 'v0_tailwindcss', $query);
 

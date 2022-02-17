@@ -1,10 +1,10 @@
 <?php
 
-function getResults($algolia, $indexName, $query)
+function getResults($algolia, $indexName, $query, $requestOptions = [])
 {
     $index = $algolia->initIndex($indexName);
 
-    return $index->search($query)['hits'];
+    return $index->search($query, $requestOptions)['hits'];
 }
 
 function getTitle($hit)
